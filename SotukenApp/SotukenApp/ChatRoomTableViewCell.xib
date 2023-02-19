@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" rowHeight="172" id="IbX-4f-e3L" customClass="ChatRoomTableViewCell" customModule="chatAppWithFirebase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="729" height="172"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IbX-4f-e3L" id="dyu-br-OPV">
+                <rect key="frame" x="0.0" y="0.0" width="729" height="172"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modric" translatesAutoresizingMaskIntoConstraints="NO" id="zH8-vz-KbK">
+                        <rect key="frame" x="15" y="56" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="zH8-vz-KbK" secondAttribute="height" multiplier="1:1" id="91m-9R-7Ab"/>
+                            <constraint firstAttribute="width" constant="60" id="gKX-4y-M10"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pL-Ys-dZ4">
+                        <rect key="frame" x="340" y="116" width="50" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="ここにメッセージが入ります" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TsY-LU-Kmn">
+                        <rect key="frame" x="454" y="25" width="255" height="122"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="255" id="GAn-3Z-zgo"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmO-Xh-34H">
+                        <rect key="frame" x="413" y="119" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" directionalLockEnabled="YES" scrollEnabled="NO" editable="NO" text="メッセージがここに入ります" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s31-Oq-nMK">
+                        <rect key="frame" x="83" y="25" width="250" height="122"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="cvJ-79-1mY"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zH8-vz-KbK" firstAttribute="leading" secondItem="dyu-br-OPV" secondAttribute="leading" constant="15" id="I7f-Ex-li6"/>
+                    <constraint firstAttribute="bottom" secondItem="TsY-LU-Kmn" secondAttribute="bottom" constant="25" id="JO1-RA-uFW"/>
+                    <constraint firstItem="5pL-Ys-dZ4" firstAttribute="leading" secondItem="s31-Oq-nMK" secondAttribute="trailing" constant="5" id="OIO-Xf-tYW"/>
+                    <constraint firstItem="TsY-LU-Kmn" firstAttribute="leading" secondItem="zmO-Xh-34H" secondAttribute="trailing" constant="5" id="Oyl-3u-4mv"/>
+                    <constraint firstAttribute="trailing" secondItem="TsY-LU-Kmn" secondAttribute="trailing" constant="20" id="Tnq-AD-iLr"/>
+                    <constraint firstItem="TsY-LU-Kmn" firstAttribute="top" secondItem="dyu-br-OPV" secondAttribute="top" constant="25" id="X5u-kB-D4J"/>
+                    <constraint firstItem="s31-Oq-nMK" firstAttribute="top" secondItem="dyu-br-OPV" secondAttribute="top" constant="25" id="aoR-La-laP"/>
+                    <constraint firstAttribute="bottom" secondItem="zmO-Xh-34H" secondAttribute="bottom" constant="36" id="cY3-f3-AqY"/>
+                    <constraint firstItem="s31-Oq-nMK" firstAttribute="bottom" secondItem="5pL-Ys-dZ4" secondAttribute="bottom" constant="10" id="olM-v4-QsA"/>
+                    <constraint firstItem="zH8-vz-KbK" firstAttribute="centerY" secondItem="dyu-br-OPV" secondAttribute="centerY" id="rXa-6h-1cw"/>
+                    <constraint firstItem="s31-Oq-nMK" firstAttribute="leading" secondItem="zH8-vz-KbK" secondAttribute="trailing" constant="10" id="th0-7p-fRz"/>
+                    <constraint firstAttribute="bottom" secondItem="s31-Oq-nMK" secondAttribute="bottom" constant="25" id="x02-wS-Nyr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="MyDateLabel" destination="zmO-Xh-34H" id="QfT-kn-lSo"/>
+                <outlet property="messageTextViewWidthConstraint" destination="cvJ-79-1mY" id="95R-Il-fMJ"/>
+                <outlet property="myMessageTextView" destination="TsY-LU-Kmn" id="ba0-sa-99D"/>
+                <outlet property="myMessageTextViewWidthConstraint" destination="GAn-3Z-zgo" id="gn5-uF-jQE"/>
+                <outlet property="partnerDateLabel" destination="5pL-Ys-dZ4" id="O65-lf-BGQ"/>
+                <outlet property="partnerMessageTextView" destination="s31-Oq-nMK" id="FEL-5W-wXT"/>
+                <outlet property="userImageView" destination="zH8-vz-KbK" id="vM0-Mf-iQo"/>
+            </connections>
+            <point key="canvasLocation" x="238.93129770992365" y="44.366197183098592"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="modric" width="240" height="218.66667175292969"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
